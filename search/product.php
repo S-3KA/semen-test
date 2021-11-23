@@ -5,7 +5,7 @@ $APPLICATION->SetTitle("Поиск");
 
 <?$APPLICATION->IncludeComponent(
 	"bitrix:search.page", 
-	"clear", 
+	".default", 
 	array(
 		"RESTART" => "N",
 		"CHECK_DATES" => "N",
@@ -35,7 +35,7 @@ $APPLICATION->SetTitle("Поиск");
 		"SHOW_ORDER_BY" => "N",
 		"SHOW_TAGS_CLOUD" => "N",
 		"AJAX_OPTION_ADDITIONAL" => "",
-		"COMPONENT_TEMPLATE" => "clear",
+		"COMPONENT_TEMPLATE" => ".default",
 		"NO_WORD_LOGIC" => "N",
 		"FILTER_NAME" => "",
 		"arrFILTER_iblock_news" => array(
@@ -47,7 +47,23 @@ $APPLICATION->SetTitle("Поиск");
 		"PATH_TO_USER_PROFILE" => "",
 		"arrFILTER_iblock_products" => array(
 			0 => "2",
-		)
+		),
+		"STRUCTURE_FILTER" => "structure",
+		"NAME_TEMPLATE" => "",
+		"SHOW_LOGIN" => "Y",
+		"TAGS_SORT" => "NAME",
+		"TAGS_PAGE_ELEMENTS" => "150",
+		"TAGS_PERIOD" => "",
+		"TAGS_URL_SEARCH" => "",
+		"TAGS_INHERIT" => "Y",
+		"FONT_MAX" => "50",
+		"FONT_MIN" => "10",
+		"COLOR_NEW" => "000000",
+		"COLOR_OLD" => "C8C8C8",
+		"PERIOD_NEW_TAGS" => "",
+		"SHOW_CHAIN" => "Y",
+		"COLOR_TYPE" => "Y",
+		"WIDTH" => "100%"
 	),
 	false
 );?>

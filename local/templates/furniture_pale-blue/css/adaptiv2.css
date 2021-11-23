@@ -1,0 +1,17 @@
+#horizontal-multilevel-menu li a.root-item-selected{
+margin-bottom: -1px;
+}
+@media(max-width:580px){
+#horizontal-multilevel-menu{
+display: block;
+background-color: var(--base);
+}
+
+
+}
+@media(max-width:470px){
+
+#sidebar .content-block:nth-of-type(2){
+margin-top:30px;
+}
+}

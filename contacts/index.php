@@ -11,7 +11,7 @@ $APPLICATION->SetTitle("Контакты");
  
 	<li>Телефон:
 		<ul> 
-			<li> <a href="tel:89502115896"><b>8-950-211-58-96</b></a></li>
+			<li> <a href="tel:+79502115896)" onclick="phone_bt()"><b>8-950-211-58-96</b></a></li>
 		</ul>
 	</li>
 </ul>
@@ -19,7 +19,7 @@ $APPLICATION->SetTitle("Контакты");
 <h2>Email</h2>
 
 <ul> 
-  <li><a href="mailto:info@example.ru" target="_blank">konyushkov.s.a@gmail.com</a> &mdash; общие вопросы</li>
+  <li><a href="mailto:konyushkov.s.a@gmail.com" target="_blank" onclick="mail_bt()" >konyushkov.s.a@gmail.com</a> — общие вопросы</li>
 </ul>
 
 <h2>Офис в Москве</h2>
