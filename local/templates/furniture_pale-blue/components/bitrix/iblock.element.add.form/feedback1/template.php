@@ -207,7 +207,7 @@ if ($arResult["MESSAGE"] <> ''):?>
 										$value = "";
 									}
 								?>
-								<input type="text" name="PROPERTY[<?=$propertyID?>][<?=$i?>]" size="<?=$arResult["PROPERTY_LIST_FULL"][$propertyID]["COL_COUNT"]; ?>" value="<?=$value?>" /><br /><?
+								<input type="text" onchange="form_undisabled()" id="PROPERTY[<?=$propertyID?>][<?=$i?>]" name="PROPERTY[<?=$propertyID?>][<?=$i?>]" size="<?=$arResult["PROPERTY_LIST_FULL"][$propertyID]["COL_COUNT"]; ?>" value="<?=$value?>" /><br /><?
 								if($arResult["PROPERTY_LIST_FULL"][$propertyID]["USER_TYPE"] == "DateTime"):?><?
 									$APPLICATION->IncludeComponent(
 										'bitrix:main.calendar',
@@ -341,7 +341,7 @@ if ($arResult["MESSAGE"] <> ''):?>
 			<?endforeach;?>
             <div>
                 <label>
-                    <input type="checkbox" onclick="form_undisabled()">
+                    <input type="checkbox" onclick="form_undisabled_check()" id="chek" value="0">
                     <span> Я принимаю условия</span>
                 </label>
             </div>
@@ -358,8 +358,10 @@ if ($arResult["MESSAGE"] <> ''):?>
             <div class="g-recaptcha" data-callback="recaptcha_callback" data-sitekey="6LeVl1YdAAAAAJhNwu1k1MBJP4DOvA9-l2HiH4lj"></div>
 
 		<?endif?>
+                <div id="billing">
+                    <input disabled  id="role" type="submit" name="iblock_submit" value="<?=GetMessage("IBLOCK_FORM_SUBMIT")  ?>" />
+                </div>
 
-					<input disabled  id="role" type="submit" name="iblock_submit" value="<?=GetMessage("IBLOCK_FORM_SUBMIT")  ?>" />
 
     <?
         if ($_POST['iblock_submit']){

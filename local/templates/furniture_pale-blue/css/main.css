@@ -449,6 +449,7 @@ a{
 	bottom: 50%;
 	z-index: 1000;
 }
+input[type="submit"]:disabled { background: #ccc; }
 #call-form{
 	transform: translate(-50%, -50%) !important;
 	position: relative;
@@ -511,6 +512,7 @@ a{
 	position: relative;
 	flex: 32.50% 0;
 	overflow: hidden;
+	background-color: #f1f1f1;
  }
 .news_name{
 	text-align: center;
@@ -538,7 +540,7 @@ a{
 	bottom: 0;
 }
 .news_content{
-	background-color: #f1f1f1;
+
 	width: 100%;
 	position: absolute;
 	display: flex;
