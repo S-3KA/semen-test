@@ -3,13 +3,36 @@
 <?if($arParams["DISPLAY_TOP_PAGER"]):?>
 	<?=$arResult["NAV_STRING"]?><br />
 <?endif;?>
-<dl class="block-list">
+<div class="block-list">
 <?foreach($arResult["ITEMS"] as $arItem):?>
-		<dt><?echo $arItem["DISPLAY_ACTIVE_FROM"]?></dt>
-		<dd><a href="<?echo $arItem["DETAIL_PAGE_URL"]?>"><?echo $arItem["PREVIEW_TEXT"]?></a></dd>
+<div class="plate_hide">
+    <div class="news_name" ><?echo $arItem["DISPLAY_ACTIVE_FROM"]?> дата публикации </div>
+    <div class="news_content">
+        <p> <? echo $arItem['PROPERTIES']['HEADING']['~VALUE'];?></p>
+<!--        --><?// echo $arItem['PROPERTIES']['IMG']['~VALUE'];?>
+
+        <div class="img">
+            <img src="<?=CFile::GetPath($arItem['PROPERTIES']['IMG']['~VALUE'])?>">
+        </div>
+
+
+    </div>
+    <div class="news_plate">
+
+        <a href="<?echo $arItem["DETAIL_PAGE_URL"]?>"><?echo $arItem["PREVIEW_TEXT"]?>
+
+        </a>
+    </div>
+</div>
+
 <?endforeach;?>
-</dl>
+</div>
 <?if($arParams["DISPLAY_BOTTOM_PAGER"]):?>
 	<br /><?=$arResult["NAV_STRING"]?>
 <?endif;?>
 </div>
+
+<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
+
+
+
